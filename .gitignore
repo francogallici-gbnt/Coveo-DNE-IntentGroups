@@ -1,0 +1,17 @@
+# Maven
+target/
+
+# Playwright
+playwright-report/
+trace.zip
+*.har
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# Logs
+*.log
