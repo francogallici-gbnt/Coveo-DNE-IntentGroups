@@ -24,10 +24,7 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
 
       - name: Run DNE automation
-        run: mvn -B -ntp clean test \
-          -Dcucumber.filter.name="4 testers in parallel per intent group" \
-          -Denv=qa -Dheadless=true
-
+        run: mvn -B -ntp clean test -Dcucumber.filter.name="4 testers in parallel per intent group" -Denv=qa -Dheadless=true
 
       - name: Upload test reports
         if: always()
