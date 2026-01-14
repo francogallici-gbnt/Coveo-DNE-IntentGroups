@@ -24,7 +24,7 @@ jobs:
           key: maven-${{ hashFiles('**/pom.xml') }}
 
       - name: Run DNE automation
-        run: mvn clean test -Denv=qa -Dheadless=true
+        run: mvn -B -ntp clean test -Denv=qa -Dheadless=true
 
       - name: Upload test reports
         if: always()
